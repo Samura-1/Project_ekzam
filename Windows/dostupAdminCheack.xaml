@@ -1,0 +1,19 @@
+﻿<Window x:Class="Project_ekzam.Windows.dostupAdminCheack"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_ekzam.Windows"
+        mc:Ignorable="d"
+        Title="Проверка кода Админа" Height="450" Width="800" Icon="/Project_ekzam;component/img/service_logo.png" ResizeMode="NoResize" FontFamily="Tw Cen MT" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button x:Name="Do_Code" Content="Войти" HorizontalAlignment="Left" Margin="270,282,0,0" VerticalAlignment="Top" Width="240" Height="45" Background="#FFFF9C22" FontFamily="Tw Cen MT" FontSize="18" FontWeight="Bold" Click="Do_login_Click"/>
+        <PasswordBox x:Name="TpasswordCode" HorizontalAlignment="Left" Margin="270,177,0,0" VerticalAlignment="Top" Width="240" Height="43"/>
+        <Label Content="Код Админа" HorizontalAlignment="Left" Margin="330,125,0,0" VerticalAlignment="Top" Width="125" FontFamily="Tw Cen MT" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.521,0.5" Height="30"/>
+        <Label Content="Вы пытается войти с правами админа" HorizontalAlignment="Left" Margin="220,45,0,0" VerticalAlignment="Top" Width="350" FontFamily="Tw Cen MT" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.521,0.5" Height="30"/>
+        <Label Content="Для продолжения введи код" HorizontalAlignment="Left" Margin="255,80,0,0" VerticalAlignment="Top" Width="290" FontFamily="Tw Cen MT" FontSize="18" FontWeight="Bold" RenderTransformOrigin="0.521,0.5" Height="30"/>
+        <Button x:Name="Do_back" Content="Назад" HorizontalAlignment="Left" Margin="25,355,0,0" VerticalAlignment="Top" Width="125" Height="45" Background="#FFFF9C22" FontFamily="Tw Cen MT" FontSize="18" FontWeight="Bold" Cursor="" Click="Do_back_Click"/>
+        <Image x:Name="logo" HorizontalAlignment="Left" Height="70" Margin="145,45,0,0" VerticalAlignment="Top" Width="75" Source="/Project_ekzam;component/img/service_logo.png"/>
+
+    </Grid>
+</Window>

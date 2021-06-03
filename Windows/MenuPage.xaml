@@ -1,0 +1,44 @@
+﻿<Window x:Class="Project_ekzam.Windows.MenuPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_ekzam.Windows"
+        mc:Ignorable="d"
+        Title="Меню" Height="450" Width="800" FontFamily="Tw Cen MT" Icon="/Project_ekzam;component/img/service_logo.png" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Background="#FFFBB0B0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="290*"/>
+            <RowDefinition Height="51*"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="logo" HorizontalAlignment="Left" Height="70" Margin="10,3,0,0" VerticalAlignment="Top" Width="75" Source="/Project_ekzam;component/img/service_logo.png"/>
+        <Label Content="Список услуг" HorizontalAlignment="Left" Margin="78,26,0,0" VerticalAlignment="Top" Width="120" FontFamily="Tw Cen MT" Height="35" FontSize="18"/>
+        <Button x:Name="do_Exit" Content="Выйти из аккаунта" HorizontalAlignment="Left" Margin="13,0,0,5" Grid.Row="2" VerticalAlignment="Bottom" Width="184" Height="40" Background="#FFFF9C22" FontFamily="Tw Cen MT" FontSize="18" FontWeight="Bold" Click="Do_login_Click"/>
+
+        <ListView x:Name="list" Margin="10,10,10,25" HorizontalContentAlignment="Center" Grid.Row="1">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="3"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Width="165" Height="180" BorderBrush="#FF444242" OpacityMask="#FF939393" BorderThickness="1,1,1,1">
+                        <StackPanel Background="{x:Null}">
+                            <Border Height="90">
+                                <Image Source="{Binding MainImagePath}" Height="65" Margin="10,12"/>
+
+                            </Border>
+                            <TextBox HorizontalContentAlignment="Center" Height="23" TextWrapping="Wrap" Text="{Binding Title}" IsEnabled="False" FontSize="16" Margin="10,0" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}"/>
+                            <TextBox HorizontalContentAlignment="Center" Height="23" TextWrapping="Wrap"  Text="{Binding Cost}" IsEnabled="False" FontSize="16" Margin="10,0" Background="{x:Null}" Foreground="Black" BorderBrush="{x:Null}"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ListView>
+    </Grid>
+</Window>
